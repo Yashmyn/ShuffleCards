@@ -12,9 +12,8 @@ namespace ShuffleCards
     {
         static void Main(string[] args)
         {
-            //Initialize dictionary and variables necessary to create deck of 52 cards.
-            Dictionary<int, Card> cardDeck = new Dictionary<int, Card>();
-            int key = 1;
+            //Initialize list and variables necessary to create deck of 52 cards.
+            List <Card> cardDeck = new List<Card>();
             string[] suitArray = new string[] {"Clubs", "Diamonds", "Hearts", "Spades"};
             string[] valueArray = new string[] { "n/a", "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
             int indexValue;
@@ -24,29 +23,32 @@ namespace ShuffleCards
             {
                 for (indexValue = 1; indexValue <= 13; indexValue++)
                 {
-                    cardDeck.Add(key, new Card(suit, valueArray[indexValue]));
-                    key++;
+                    cardDeck.Add(new Card(suit, valueArray[indexValue]));
                 }
             }
-                       
+
             //Display the full deck of cards.
             Console.WriteLine("Here's the full deck of cards:\n");
-            foreach (int Key in cardDeck.Keys)
+            for (int i = 0; i < cardDeck.Count; i++)
             {
-                cardDeck[Key].Display();
+                cardDeck[i].Display();
             }
 
-            //Code found on stackoverflow...
-            var r = new Random();
-            // print random integer >= 0 and  < 100
-            Console.WriteLine("\n" + r.Next(52));
 
-            //Console.WriteLine("\nHere's the new deck:\n");
-            //foreach (int Key in cardDeck.Keys)
-            //{
-            //    cardDeck[Key].Display();
-            //}
+            cardDeck.RemoveAt(3);
 
+            for (int i = 0; i < cardDeck.Count; i++)
+            {
+                cardDeck[i].Display();
+            }
+
+
+            ////Code found on stackoverflow...
+            //var r = new Random();
+            //// print random integer >= 0 and  < 100
+            //Console.WriteLine("\n" + r.Next(52));
+
+      
             Console.ReadLine();
         }
     }
