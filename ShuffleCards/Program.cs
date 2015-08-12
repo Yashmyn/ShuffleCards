@@ -38,7 +38,7 @@ namespace ShuffleCards
             }
             
             //Prompt user to ask to be dealt a hand of cards.
-            Console.Write("\nPRESS ANY KEY TO BE DEALT A HAND OF CARDS: ");
+            Console.Write("\nTO HAVE THE DECK SHUFFLED AND TO BE DEALT A HAND OF CARDS, PRESS <Enter>: ");
             Console.Read();
 
             //Initialize list for the new hand; these cards will first be removed from the original deck.
@@ -48,6 +48,10 @@ namespace ShuffleCards
             //"Shuffle" the deck and deal 5 cards.
             //for (int j = 1; j <= 5; j++ )
             //    newHand.Add(Card[__]);
+
+            //var rand = new Random();
+            //var randomList = imagesEasy.OrderBy(x => rand.Next()).ToList();
+
 
             //cardDeck.RemoveAt(3);
 
