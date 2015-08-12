@@ -12,8 +12,8 @@ namespace ShuffleCards
     {
         static void Main(string[] args)
         {
-            //Lengthen console window.
-            Console.SetWindowSize(80, 45);
+            //Lengthen the console window.
+            Console.SetWindowSize(80, 58);
 
             //Initialize list and variables necessary to create deck of 52 cards.
             List<Card> cardDeck = new List<Card>();
@@ -31,19 +31,30 @@ namespace ShuffleCards
             }
 
             //Display the full deck of cards.
-            Console.WriteLine("Here's the full deck of cards:\n");
+            Console.WriteLine("FULL DECK OF CARDS (WITHOUT THE JOKERS):");
             for (int i = 0; i < cardDeck.Count; i++)
             {
                 cardDeck[i].Display();
             }
+            
+            //Prompt user to ask to be dealt a hand of cards.
+            Console.Write("\nPRESS ANY KEY TO BE DEALT A HAND OF CARDS: ");
+            Console.Read();
 
+            //Initialize list for the new hand; these cards will first be removed from the original deck.
+            List<Card> newHand = new List<Card>();
+            
+            
+            //"Shuffle" the deck and deal 5 cards.
+            //for (int j = 1; j <= 5; j++ )
+            //    newHand.Add(Card[__]);
 
-            cardDeck.RemoveAt(3);
+            //cardDeck.RemoveAt(3);
 
-            for (int i = 0; i < cardDeck.Count; i++)
-            {
-                cardDeck[i].Display();
-            }
+            //for (int i = 0; i < cardDeck.Count; i++)
+            //{
+            //    cardDeck[i].Display();
+            //}
 
             Console.ReadLine();
         }
