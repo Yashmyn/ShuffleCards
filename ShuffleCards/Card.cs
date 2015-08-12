@@ -24,7 +24,7 @@ namespace ShuffleCards
 
         public void Display()
         {
-            Console.WriteLine(this.cardValue + " of " + this.cardSuit);
+            Console.WriteLine("\t" + this.cardValue + " of " + this.cardSuit);
         }
 
         public void Deal()
